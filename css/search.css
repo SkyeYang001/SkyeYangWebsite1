@@ -1,3 +1,69 @@
+* {
+    box-sizing: border-box;
+    /* padding is adjust to align with others*/
+}
+
+
 body {
-    background: #F000FF;
+    /* background: #F000FF; */
+    /* background: powderblue; */
+    background-image: linear-gradient(90deg, #7d5fff, #710000);
+    /* Gives the background multiple colors */
+    display: flex;
+    /* uses flexbox which responds to different screen sizes */
+    align-items: center;
+    /* use for vetrically center */
+    justify-content: center;
+    /* use for horizontally center */
+    height: 100vh;
+    /* setting the body height to 100 */
+    margin: 0;
+    /* removes side scroll bar*/
+}
+
+.search {
+    position: relative;
+    /* the postitive of tags inside .search is relative inside*/
+    /* if the postitive is not relative the tags will be on the full page*/
+    height: 50px;
+}
+
+.search .input {
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+    padding: 15px;
+    border: 0;
+    background-color: white;
+    transition: width 1s ease;
+    /* transition */
+}
+
+.btn {
+    background-color: white;
+    border: 0;
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    /* cursor is change when hoover */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* takes the button at the top left */
+    transition: transform 1s ease;
+    /* adds transitions */
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(190px);
+}
+
+.btn:focus, input:focus {
+    outline:none;
+    /* the border when focus is gone */
 }
