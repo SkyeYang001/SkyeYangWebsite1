@@ -6,17 +6,24 @@ body {
     margin: 0;
     display: flex;
     height: 100vh;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
 }
 
 .bg {
     background-image: url('../images/bluelobster.jpg');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
     position: absolute;
     filter: blur(50px);
+    z-index: -1;
+    /* Position of the tag (in front or behind*/
+}
+
+.loading-text {
+    font-size: 50px;
+    color: white;
 }
