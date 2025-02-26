@@ -3,5 +3,11 @@ const bg = document.querySelector('.bg')
 
 // variable
 let load = 0
-// backticks (`) turning int to string
-loadText.innerText = `${load}%`
+
+function blurring() {
+    load = load + 1
+    // backticks (`) turning int to string
+    loadText.innerText = `${load}%`
+
+
+}
