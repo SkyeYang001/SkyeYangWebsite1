@@ -6,7 +6,7 @@ let load = 0
 
 // calling the function many times
 // the time is in millseconds
-let int = setInterval(blurring, 50)
+let int = setInterval(blurring, 30)
 
 
 function blurring() {
@@ -18,5 +18,6 @@ function blurring() {
     // backticks (`) turning int to string
     loadText.innerText = `${load}%`
     // going to the css sheet
-    bg.style.fitler = "blur(0px)"
+    // backticks (`)
+    bg.style.filter = `blur(${100 - load}px)`
 }
