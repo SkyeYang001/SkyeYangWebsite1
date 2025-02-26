@@ -19,5 +19,6 @@ function blurring() {
     loadText.innerText = `${load}%`
     // going to the css sheet
     // backticks (`)
-    bg.style.filter = `blur(${100 - load}px)`
+    bg.style.filter = `blur(${50 - (load/2)}px)`
+    loadText.style.opacity = `${load/100}`
 }
