@@ -11,7 +11,10 @@ body {
 }
 
 .bg {
-    background-image: url('../images/LoadingBlueLobster.jpg')
-    no-repeat center
-    center/cover;
+    background-image: url('../images/LoadingBlueLobster.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    width: 100vh;
+    height: 100vh;
 }
