@@ -20,7 +20,7 @@ body {
     margin: 30px;
 }
 
-.eventhandler input, .eventhandler button {
+.eventhandler input {
     padding: 10px;
     margin: 10px;
 }
@@ -29,6 +29,6 @@ body {
     cursor: auto;
 }
 
-button {
+.button {
     cursor: pointer;
 }
