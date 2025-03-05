@@ -12,5 +12,5 @@ function submit() {
     let name = document.getElementById('event1').value;
     let location = document.getElementById('event2').value;
     let quote = document.getElementById('event3').value;
-    document.getElementById('result').innerHTML = "Hello " + name + " welcome to " + location + quote + "!";
+    document.getElementById('result').innerHTML = "Hello " + name + "! Welcome to " + location + "! \"" + quote + "\"!";
 }
