@@ -22,8 +22,15 @@ body {
     margin: 30px;
 }
 
-.input {
+.eventhandler input {
     padding: 10px;
     margin: 10px;
+}
+
+.input {
+    cursor: auto;
+}
+
+.button {
     cursor: pointer;
 }
