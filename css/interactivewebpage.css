@@ -26,7 +26,7 @@ body {
 .eventhandler input {
     padding: 10px;
     margin: 10px;
-    border-outline:
+    border-radius: 10px;
 }
 
 .input {
