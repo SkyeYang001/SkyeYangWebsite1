@@ -11,6 +11,6 @@ function submit() {
     console.log("Your good to go!");
     let name = document.getElementById('event1').value;
     let date = document.getElementById('event2').value;
-    let qutoe = document.getElementById('event3').value;
-    document.getElementById('result').innerHTML = name;
+    let quote = document.getElementById('event3').value;
+    document.getElementById('result').innerHTML = name + date + quote;
 }
