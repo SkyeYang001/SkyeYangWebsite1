@@ -17,6 +17,7 @@ element1.addEventListener('dblclick', () => {
 
 element2.addEventListener('mouseover', () => {
     element2.style.color = "green"
+    // no (-) in background-color
     element2.style.backgroundColor = "blue"
 })
 
@@ -24,3 +25,52 @@ element2.addEventListener('mouseout', () => {
     element2.style.color = "white"
     element2.style.backgroundColor = "#BB33BB"
 })
+
+let positionY = 0;
+let positionX = 0;
+
+
+// Anything in the page event listener
+document.addEventListener('keyup', (event) => {
+    console.log(event.key)
+    // showing pressed keys on the console
+    if (event.key == 'ArrowDown') {
+        positionY = positionY + 10;
+    } else if (event.key == 'ArrowUp') {
+        positionY = positionY - 10;
+    } else if (event.key == 'ArrowLeft') {
+        positionX = positionX + 10;
+    } else if (event.key == 'ArrowRight') {
+        positionX = positionX - 10;
+    }
+    element3.style.top = `${positionY}px`
+    element3.style.right = `${positionX}px`
+})
+
+element4.addEventListener('click', () => {
+    element4.style.width = "10px"
+    element4.style.height = "10px"
+    element4.innerHTML = ""
+    element4.style.opacity = .3
+})
+
+document.addEventListener('keyup', (event) => {
+    if (event.key == 'j') {
+        element4.style.width = "300px"
+        element4.style.height = "50px"
+        element4.innerHTML = "<h4>Click me to make me SMALL! <br> Press 'j' to bring me back.</h4>"
+        element4.style.opacity = 1
+    }
+})
+
+const list = ['running', 'paused']
+let index = 0
+element5.addEventListener('click', () => {
+    element5.style.animationPlayState = list[index]
+    // modulo
+    index = (index + 1) % 2
+})
+
+// element.addEventListener('', () => {
+
+// })
