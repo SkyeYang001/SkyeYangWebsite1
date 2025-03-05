@@ -8,11 +8,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(180deg, #, #);
+    background-image: linear-gradient(180deg, #1dd1f5, #ffed63);
 }
 
 .text {
     width: 30vw;
+    color: white;
 }
 
 .eventhandler {
@@ -25,6 +26,7 @@ body {
 .eventhandler input {
     padding: 10px;
     margin: 10px;
+    border-outline:
 }
 
 .input {
@@ -33,4 +35,8 @@ body {
 
 .button {
     cursor: pointer;
+}
+
+button:focus, input:focus {
+    outline:none;
 }
