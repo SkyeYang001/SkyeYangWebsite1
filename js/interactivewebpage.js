@@ -4,5 +4,10 @@ const event3 = document.getElementById('event3')
 const event4 = document.getElementById('event4')
 
 event4.addEventListener('click', () => {
-    console.log("Your good to go!")
+    submit()
 })
+
+function submit() {
+    console.log("Your good to go!")
+    
+}
