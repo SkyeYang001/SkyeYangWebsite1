@@ -16,6 +16,11 @@ body {
     color: white;
 }
 
+::selection {
+    color: #f5a00c;
+    background: #f5425a;
+}
+
 .eventhandler {
     display: flex;
     width: 100px;
