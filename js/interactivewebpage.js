@@ -45,5 +45,5 @@ function submit() {
     let name = document.getElementById('event1').value;
     let location = document.getElementById('event2').value;
     let quote = document.getElementById('event3').value;
-    
+    document.body.style.backgroundColor = "red";
 }
