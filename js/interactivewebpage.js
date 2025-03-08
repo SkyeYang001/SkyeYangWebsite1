@@ -35,7 +35,6 @@ event4.addEventListener('mouseout', () => {
     event4.style.backgroundColor = "white"
 })
 
-
 event4.addEventListener('click', () => {
     submit()
 })
@@ -45,5 +44,11 @@ function submit() {
     let name = document.getElementById('event1').value;
     let location = document.getElementById('event2').value;
     let quote = document.getElementById('event3').value;
-    
+    document.getElementById('result').innerHTML = "Hello " + name + "! Welcome to " + location + "! \"" + quote + "\"!";
+    // document.body.style.backgroundImage = "linear-gradient(90deg, #07edb7, #9938c9)";
+    if (document.body.style.backgroundImage = "linear-gradient(180deg, #1dd1f5, #ffed63)") {
+        document.body.style.backgroundImage = "linear-gradient(90deg, #07edb7, #9938c9)";
+    } else {
+        document.body.style.backgroundImage = "linear-gradient(180deg, #1dd1f5, #ffed63)";
+    }
 }
