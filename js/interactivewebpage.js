@@ -4,35 +4,59 @@ const event3 = document.getElementById('event3')
 const event4 = document.getElementById('event4')
 
 event1.addEventListener('mouseover', () => {
-    event1.style.backgroundColor = "#e3be07"
+    event1.style.borderStyle = "solid"
 })
 
 event1.addEventListener('mouseout', () => {
-    event1.style.backgroundColor = "white"
+    event1.style.borderStyle = "dashed"
+})
+
+event1.addEventListener('focus', () => {
+    event1.style.height = "80px"
+})
+
+event1.addEventListener('blur', () => {
+    event1.style.height = "50px"
 })
 
 event2.addEventListener('mouseover', () => {
-    event2.style.backgroundColor = "#e3be07"
+    event2.style.borderStyle = "solid"
 })
 
 event2.addEventListener('mouseout', () => {
-    event2.style.backgroundColor = "white"
+    event2.style.borderStyle = "dashed"
+})
+
+event2.addEventListener('focus', () => {
+    event2.style.height = "80px"
+})
+
+event2.addEventListener('blur', () => {
+    event2.style.height = "50px"
 })
 
 event3.addEventListener('mouseover', () => {
-    event3.style.backgroundColor = "#e3be07"
+    event3.style.borderStyle = "solid"
 })
 
 event3.addEventListener('mouseout', () => {
-    event3.style.backgroundColor = "white"
+    event3.style.borderStyle = "dashed"
+})
+
+event3.addEventListener('focus', () => {
+    event3.style.height = "80px"
+})
+
+event3.addEventListener('blur', () => {
+    event3.style.height = "50px"
 })
 
 event4.addEventListener('mouseover', () => {
-    event4.style.backgroundColor = "#f7eb0a"
+    event4.style.borderStyle = "solid"
 })
 
 event4.addEventListener('mouseout', () => {
-    event4.style.backgroundColor = "white"
+    event4.style.borderStyle = "dashed"
 })
 
 event4.addEventListener('click', () => {
