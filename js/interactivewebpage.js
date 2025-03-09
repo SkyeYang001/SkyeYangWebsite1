@@ -3,6 +3,7 @@ const event2 = document.getElementById('event2')
 const event3 = document.getElementById('event3')
 const event4 = document.getElementById('event4')
 
+
 event1.addEventListener('mouseover', () => {
     event1.style.borderStyle = "solid"
 })
@@ -63,6 +64,7 @@ event4.addEventListener('click', () => {
     submit()
 })
 
+let background = true;
 
 
 function submit() {
@@ -72,9 +74,10 @@ function submit() {
     let quote = document.getElementById('event3').value;
     document.getElementById('result').innerHTML = "Hello " + name + "! Welcome to " + location + "! \"" + quote + "\"!";
     // document.body.style.backgroundImage = "linear-gradient(90deg, #07edb7, #9938c9)";
-    if (document.body.style.backgroundImage = "linear-gradient(180deg, #1dd1f5, #ffed63)") {
+    if (background) {
         document.body.style.backgroundImage = "linear-gradient(90deg, #07edb7, #9938c9)";
     } else {
         document.body.style.backgroundImage = "linear-gradient(180deg, #1dd1f5, #ffed63)";
     }
+    background = !background
 }
