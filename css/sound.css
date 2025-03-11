@@ -11,3 +11,7 @@ body {
     background-color:rgb(78, 209, 71);
 }
 
+.btn {
+    margin: 35px;
+    padding: 15px;
+}
