@@ -3,7 +3,7 @@ If I want Github to reflect my changes
 2. git commit -m "text"
 3. git push
 
-CSS always do this  {
+CSS always do this:
 
 * {
     box-sizing: border-box;
@@ -12,8 +12,6 @@ CSS always do this  {
 body {
     margin: 0;
     display: flex;
-}
-
 }
 
 
