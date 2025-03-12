@@ -13,6 +13,7 @@ sounds.forEach(sound => {
 })
 
 function stopSongs() {
+    console.log("Your good to go!");
     sounds.forEach(sound => {
         document.getElementById(sound).pause()
         document.getElementById(sound).currentTime = 0;
