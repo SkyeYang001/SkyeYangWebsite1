@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Skye Yang Website 1 Insect Game Page</title>
+        <link rel="stylesheet" href="css/insect.css">
+        <link rel="stylesheet" href="css/nav.css">
+    </head>
+
+    <body>
+        <div class="screen">
+            <h1>Catch The Insects</h1>
+            <button class="btn" id="start-btn">Play Game</button>
+        </div>
+        <div class="screen">
+            <h1>What is your "favorite" insect?</h1>
+            <ul class="insects-list">
+                <li>
+                    <button class="choose-insect-btn">
+                        <p>Fly</p>
+                        <img src="images/insect0fly.jpg" alt="fly">
+                    </button>
+                </li>
+                <li>
+                    <button class="choose-insect-btn">
+                        <p>Mosquito</p>
+                        <img src="images/insect1mosquito.jpg" alt="mosquito">
+                    </button>
+                </li>
+                <li>
+                    <button class="choose-insect-btn">
+                        <p>Spider</p>
+                        <img src="images/insect2spider.jpg" alt="spider">
+                    </button>
+                </li>
+                <li>
+                    <button class="choose-insect-btn">
+                        <p>Roach</p>
+                        <img src="images/insect3roach.jpg" alt="roach">
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+        <div class="screen game-container" id="game-container">
+            <h3 id="time">Time: 00:00</h3>
+            <h3 class="score "id="score">Score: 0</h3>
+            <h5 class="messge" id="message">
+                Are you annoyed yet? <br>
+                You are playing an impossible game!!
+            </h5>
+        </div>
+
+    </body>
+    <script src="js/insect.js"></script>
+    <script src="js/nav.js"></script>
+
+</html>
