@@ -36,6 +36,9 @@ function increaseTime() {
     if (s < 10) {
         s = `0${s}`
     }
+    if (m < 10) {
+        m = `0${m}`
+    }
     time.innerHTML = `Time: ${m}:${s}`
     seconds = seconds + 1;
 }
