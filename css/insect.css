@@ -76,3 +76,12 @@ h1 {
    height: 100px;
    object-fit:contain;
 }
+
+.game-container {
+    position: relative;
+}
+
+.time, .score {
+    position: absolute;
+    top: 20px;
+}
