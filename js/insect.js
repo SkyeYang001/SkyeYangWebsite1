@@ -20,7 +20,10 @@ choose_insects_btns.forEach(btn => {
         const img = btn.querySelector('img')
         const src = img.getAttribute('src')
         const alt = img.getAttribute('alt')
-        selected_insect = {src, alt}
+        selected_insect = {
+            src,
+            alt
+        }
         startGame()
     })
 })
@@ -41,4 +44,10 @@ function increaseTime() {
     }
     time.innerHTML = `Time: ${m}:${s}`
     seconds = seconds + 1;
+}
+
+function createinsect() {
+    const insect = document.createElement('div')
+    insect.classList.add('insect')
+    insect.innerHTML = `<img src="${selected_insect.src}" alt="${selected_insect.alt}">`
 }
