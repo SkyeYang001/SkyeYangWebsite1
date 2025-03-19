@@ -25,6 +25,7 @@ choose_insects_btns.forEach(btn => {
             alt
         }
         startGame()
+        createinsect()
     })
 })
 
