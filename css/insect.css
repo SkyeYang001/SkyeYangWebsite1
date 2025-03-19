@@ -123,5 +123,5 @@ h1 {
 }
 
 .insect.caught {
-    
+    transform: scale(0);
 }
