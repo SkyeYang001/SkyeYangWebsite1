@@ -1,8 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    background-color: #82c910;
+    color: #ffffff;
+    font-family: "Press Start 2P", sans-serif;
+    height: 100vh;
+    text-align: center;
     /* display: flex; */
+}
+
+h1 {
+    line-height: 1.4;
+}
+
+.btn {
+    border: 0;
+    background-color: #ffffff;
+    color: #82c910;
+    padding: 15px 20px;
+    /* inherit is what the body is using */
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:focus {}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.insects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.insects-list li {
+    margin: 10px;
+}
+
+.choose-insect-btn {
+    background-color:transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: inherit;
+    width: 150px;
+    height: 150px;
+}
+
+.choose-insect-btn img {
+   width: 100px;
+   height: 100px;
+   object-fit:contain;
 }
