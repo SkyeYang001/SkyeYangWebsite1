@@ -6,6 +6,10 @@ const time = document.getElementById('time')
 const score = document.getElementById('score')
 const message = document.getElementById('message')
 
+let seconds = 0
+let scores = 0
+let selected_insect = {}
+
 start_btn.addEventListener('click', () => {
     screens[0].classList.add('up')
 })
@@ -13,6 +17,16 @@ start_btn.addEventListener('click', () => {
 choose_insects_btns.forEach(btn => {
     btn.addEventListener('click', () => {
         screens[1].classList.add('up')
-        
+        const img = btn.querySelector('img')
+        const src = img.getAttribute('src')
+        const alt = img.getAttribute('alt')
+        selected_insect = {src, alt}
+        // startGame()
     })
 })
+
+// function startGame() {}
+
+function increaseTime() {
+    let m = Math.floor
+}
