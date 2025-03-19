@@ -21,7 +21,7 @@ choose_insects_btns.forEach(btn => {
         const src = img.getAttribute('src')
         const alt = img.getAttribute('alt')
         selected_insect = {src, alt}
-        // startGame()
+        startGame()
     })
 })
 
