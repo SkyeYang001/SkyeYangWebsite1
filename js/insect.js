@@ -83,4 +83,7 @@ function addInsects() {
 function increaseScore() {
     scores = scores + 1
     score.innerHTML = `Score: ${scores}`
+    if (scores > 10) {
+        message.classList.add('visible')
+    }
 }
