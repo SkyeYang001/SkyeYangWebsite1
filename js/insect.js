@@ -51,9 +51,36 @@ function createinsect() {
     const insect = document.createElement('div')
     insect.classList.add('insect')
     insect.innerHTML = `<img src="${selected_insect.src}" alt="${selected_insect.alt}">`
+    const {x , y} = getRandomLocation()
+    // console.log(x,y)
+    insect.style.top = `${y}px`
+    insect.style.left = `${x}px`
     game_container.appendChild(insect)
+    insect.addEventListener('click', catchInsect)
 }
 
-function getRandonLocation() {
-    
+function getRandomLocation() {
+    const width = window.innerWidth
+    const height = window.innerHeight
+    // console.log(Math.random())
+    const x = Math.random() * width
+    const y = Math.random() * height
+    return {x ,y}
+}
+
+function catchInsect() {
+    increaseScore()
+    this.classList.add('caught')LO
+    setTimeout( () => this.remove(), 2000)
+    addInsects()
+}
+
+function addInsects() {
+    setTimeout(createInsect(), 1000)
+    setTimeout(createInsect(), 1500)
+}
+
+function increaseScore() {
+    scores = scores + 1
+    score.innerHTML = `Score: ${scores}`
 }
