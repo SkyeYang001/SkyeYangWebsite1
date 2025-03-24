@@ -112,7 +112,7 @@ h1 {
     transition: transform 1s ease-in;
 }
 
-.message.vibible {
+.message.visible {
     opacity: 1;
     transform: translate(-50%, 150%);
 }
