@@ -70,7 +70,7 @@ function getRandomLocation() {
 
 function catchInsect() {
     increaseScore()
-    this.classList.add('caught')LO
+    this.classList.add('caught')
     setTimeout( () => this.remove(), 2000)
     addInsects()
 }
