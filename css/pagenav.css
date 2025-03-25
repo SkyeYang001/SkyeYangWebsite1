@@ -1,3 +1,6 @@
+.body {
+    padding-bottom: 50px;
+}
 .container {
     max-width: 1200px;
     margin: 0, auto;
@@ -20,7 +23,6 @@
 }
 
 .nav ul {
-    font-family: 'Open Sans', sans-serif;
     display: flex;
     list-style-type: none;
     align-items: center;
