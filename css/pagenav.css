@@ -1,0 +1,50 @@
+.container {
+    max-width: 1200px;
+    margin: 0, auto;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgb(22, 22, 22);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a {
+    color: rgb(255, 255, 255);
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+.nav a.current,
+nav a:hover {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.nav.active {
+    background-color: rgb(255, 255, 255);
+}
+
+.nav.active a {
+    color: rgb(0, 0, 0);
+}
+
+.nav.active .container {
+    padding: 10px 0;
+}
