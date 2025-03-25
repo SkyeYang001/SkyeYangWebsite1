@@ -12,7 +12,7 @@ element1.addEventListener('click', () => {
 })
 
 element1.addEventListener('dblclick', () => {
-    element1.innerHTML = "I've been double clicked! <br> Try single clicking me"
+    element1.innerHTML = "I've been double clicked! <br> Try single clicking me <br> or make me disappear by pressing h"
 })
 
 element2.addEventListener('mouseover', () => {

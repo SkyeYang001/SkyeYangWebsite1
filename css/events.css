@@ -31,6 +31,10 @@ body {
     cursor: pointer;
 }
 
+#element1.active {
+    display: none;
+}
+
 #element2 {
     position: absolute;
     bottom: 0px;
