@@ -4,6 +4,7 @@
 }
 
 .nav {
+    font-family: 'Open Sans', sans-serif;
     position: fixed;
     background-color: rgb(22, 22, 22);
     top: 0;
@@ -19,6 +20,7 @@
 }
 
 .nav ul {
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     list-style-type: none;
     align-items: center;
