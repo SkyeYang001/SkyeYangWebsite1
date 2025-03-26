@@ -19,9 +19,6 @@ document.addEventListener('keyup', (event) => {
     if (event.key == 'h') {
     element1.classList.add('active')
     }
-    if (event.key == 'u') {
-        element1.classList.remove('active')
-    }
 })
 
 element2.addEventListener('mouseover', () => {
