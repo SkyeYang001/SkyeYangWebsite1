@@ -15,6 +15,12 @@ element1.addEventListener('dblclick', () => {
     element1.innerHTML = "I've been double clicked! <br> Try single clicking me <br> or make me disappear by pressing h"
 })
 
+document.addEventListener('keyup', (event) => {
+    if (event.key == 'j') {
+    
+    }
+})
+
 element2.addEventListener('mouseover', () => {
     element2.style.color = "green"
     // no (-) in background-color
