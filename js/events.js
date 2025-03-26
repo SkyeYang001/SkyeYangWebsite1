@@ -12,12 +12,20 @@ element1.addEventListener('click', () => {
 })
 
 element1.addEventListener('dblclick', () => {
-    element1.innerHTML = "I've been double clicked! <br> Try single clicking me <br> or make me disappear by pressing h"
+    element1.innerHTML = "I've been double clicked! <br> Try single clicking me <br> or press h to make me disappear and reappear"
 })
+
+let active = false
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'h') {
-    element1.classList.add('active')
+        if (active == false) {
+            element1.classList.add('active')
+            active = true
+        } else {
+            element1.classList.remove('active')
+            active = false
+        }
     }
 })
 
