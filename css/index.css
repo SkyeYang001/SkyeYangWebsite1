@@ -15,6 +15,7 @@ body {
 .index {
     height: 100vh;
     margin-top:70px;
+    font-family: "Protest Strike", sans-serif;
 }
 
 .hero {
@@ -46,11 +47,10 @@ body {
     /* rgba adds opacity */
     background-color: rgba(28, 255, 255, 0.3);
     /* opacity: 0.5; */
-    z-index: -1;
+    z-index: -3;
 }
 
 .hello {
-    font-family: "Protest Strike", sans-serif;
     color: #13afed;
     padding: 5px;
     width: 1200px;
@@ -74,6 +74,10 @@ body {
     display: flex;
     justify-content:center;
     /* align-items:center; */
+    /* z-index:20; */
+    position: absolute;
+    bottom: 150px;
+    left: 165px;
 }
 
 .box {
