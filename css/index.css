@@ -12,6 +12,11 @@ body {
     /* display: flex; */
 }
 
+::selection {
+    color: #ffd817;
+    background: #f5a720;
+}
+
 .index {
     height: 100vh;
     margin-top:70px;
@@ -59,6 +64,10 @@ body {
     border-radius: 15px;
 }
 
+.hello.active {
+    color: #ed530c;
+}
+
 .hello h1 {
     font-size:45px;
     line-height: 80px;
@@ -93,6 +102,10 @@ body {
     border-radius: 5px;
     letter-spacing: 1.5px;
     cursor: pointer;
+}
+
+.box.active {
+    background-color: rgb(117, 68, 46, 0.8);
 }
 
 #element1 {
