@@ -13,12 +13,12 @@ element1.addEventListener('click', () => {
     if (pictureactive == false) {
         hero.classList.add('active')
         hello.classList.add('active')
-
+        // box.classList.add('active')
         pictureactive = true
     } else {
         hero.classList.remove('active')
         hello.classList.remove('active')
-
+        // box.classList.remove('active')
         pictureactive = false
     }
 })
