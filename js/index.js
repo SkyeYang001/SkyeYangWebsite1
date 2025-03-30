@@ -34,9 +34,11 @@ let musicactive = false
 element3.addEventListener('click', () => {
     if (musicactive == true) {
         document.getElementById(music).pause()
+        element3.classList.add('active')
         // document.getElementById(music).currentTime = 0;
     } else {
         document.getElementById('music').play()
+        element3.classList.remove('active')
         musicactive == true
     }
 })

@@ -119,3 +119,7 @@ body {
 #element3 {
     cursor: pointer;
 }
+
+#element3.active {
+    background-color: rgb(117, 68, 46, 0.8);
+}
