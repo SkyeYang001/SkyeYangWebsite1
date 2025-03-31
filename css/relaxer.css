@@ -89,3 +89,6 @@ body {
     display: block;
 }
 
+.relaxter-container.grow {
+    animation: grow ;
+}
