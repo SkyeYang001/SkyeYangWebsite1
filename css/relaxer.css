@@ -19,3 +19,14 @@ body {
     margin-top:70px;
     font-family: "Gabarito", sans-serif;
 }
+
+.relaxer-container {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    
+}
