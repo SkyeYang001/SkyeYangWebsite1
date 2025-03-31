@@ -1,5 +1,5 @@
-const container = document.getElementbyId('relaxer-container')
-const text = document.getElementbyId('text')
+const container = document.getElementById('relaxer-container')
+const text = document.getElementById('text')
 
 setInterval(breathAnimation, 7500)
 
