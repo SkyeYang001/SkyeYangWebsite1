@@ -1,8 +1,12 @@
 const container = document.getElementbyId('relaxer-container')
 const text = document.getElementbyId('text')
 
+breathAnimation()
+breathAnimation()
+
 function breathAnimation() {
     text.innerHTML = 'Breath In'
+    container.classList.remove('shrink')
     container.classList.add('grow')
 
     setTimeout( () => {
