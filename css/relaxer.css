@@ -6,8 +6,8 @@
 
 body {
     margin: 0;
-    /* display: flex; */
-    background: #224941 url('../images/relax-cat.jpg');
+    background: #224941 url('../images/relax-cat.jpg')
+    no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     flex-direction:column;
