@@ -101,3 +101,16 @@ body {
         transform: scale(1.2);
     }
 }
+
+.relaxter-container.shrink {
+    animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
