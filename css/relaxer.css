@@ -7,12 +7,12 @@
 body {
     margin: 0;
     background: #224941 url('../images/relax-cat.jpg') no-repeat center center/cover;
-
+    overflow: hidden;
 }
 
 .relaxer {
     color: white;
-    margin-top: 70px;
+    margin-top: 100px;
     font-family: "Gabarito", sans-serif;
     min-height: 100vh;
     display: flex;
