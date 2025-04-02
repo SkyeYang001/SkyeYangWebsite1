@@ -89,7 +89,7 @@ body {
     display: block;
 }
 
-.relaxter-container.grow {
+.relaxer-container.grow {
     animation: grow 3s linear forwards;
 }
 
@@ -102,7 +102,7 @@ body {
     }
 }
 
-.relaxter-container.shrink {
+.relaxer-container.shrink {
     animation: shrink 3s linear forwards;
 }
 
