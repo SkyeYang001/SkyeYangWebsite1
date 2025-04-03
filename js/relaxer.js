@@ -1,6 +1,7 @@
 const container = document.getElementById('relaxer-container')
 const text = document.getElementById('text')
 
+breathAnimation()
 setInterval(breathAnimation, 7500)
 
 function breathAnimation() {
