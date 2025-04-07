@@ -12,6 +12,8 @@ let ballXPosition = windowWidth / 2 - ballRadius
 let ballXDirection = 1
 let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
+let padelLeftWidth = 20
+let padelLeftHeight = 100
 
 createBall()
 
