@@ -41,7 +41,7 @@ function moveBall() {
     ballYPosition = ballXPosition + ballSpeed * ballYDirection
     ball.style.top = `${ballYPosition}px`
     if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius) {
-        ballYPosition = ballYDirection * 1
+        ballYPosition = ballYDirection * -1
     }
 }
 
@@ -53,3 +53,5 @@ function createPadel() {
     padelLeft.style.top = `${(windowHeight - padelLeftHeight)/2}px`
     padelLeft.style.left = "50px"
 }
+
+LPadel.addEventListener('keyup')
