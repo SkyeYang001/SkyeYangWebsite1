@@ -50,7 +50,7 @@ function createPadel() {
     padelLeft.style.width = `${padelLeftWidth}px`
     padelLeft.style.backgroundColor = "Red"
     padelLeft.style.position = "absolute"
-    padelLeft.style.top = `${}px`
+    // padelLeft.style.top = `${}px`
     padelLeft.style.left = `${}px`
 
 }
