@@ -15,6 +15,7 @@ let ballYDirection = 1
 let padelLeftWidth = 20
 let padelLeftHeight = 200
 let padelLeftSpeed = 30
+let padelLeftXPosition = 50
 let padelLeftYPosition = (windowHeight - padelLeftHeight)/2
 
 createBall()
@@ -45,8 +46,9 @@ function moveBall() {
     if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius) {
         ballYPosition = ballYDirection * -1
     }
-    if (ballXPosition <= padelLeftWidth && ballYPosition <= windowHeight + padelLeftYPosition) {
-
+    if (ballXPosition <= padelLeftXPosition || ballYPosition >= windowHeight - padelLeftYPosition && ballYPosition <= padelLeftYPosition) {
+        ballXDirection = ballXDirection * -1
+        ballYPosition = ballYDirection * -1
     }
 }
 
@@ -56,7 +58,7 @@ function createPadel() {
     padelLeft.style.backgroundColor = "Red"
     padelLeft.style.position = "absolute"
     padelLeft.style.top = `${padelLeftYPosition}px`
-    padelLeft.style.left = "50px"
+    padelLeft.style.left = `${padelLeftXPosition}px`
 }
 
 document.addEventListener('keyup', (event) => {
