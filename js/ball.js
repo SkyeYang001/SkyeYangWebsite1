@@ -55,5 +55,10 @@ function createPadel() {
 }
 
 document.addEventListener('keyup', (event) => {
-    
+    if (event.key == 'w') {
+        
+    }
+    if (event.key == 's') {
+
+    }
 })
