@@ -58,9 +58,9 @@ function createPadel() {
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
-        padelLeftYPosition = `${padelLeftYPosition + padelLeftSpeed}px`
+        padelLeftYPosition = padelLeftYPosition + padelLeftSpeed
     }
     if (event.key == 's') {
-        padelLeftYPosition = `${padelLeftYPosition - padelLeftSpeed}px`
+        padelLeftYPosition = padelLeftYPosition - padelLeftSpeed
     }
 })
