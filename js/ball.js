@@ -14,6 +14,8 @@ let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
 let padelLeftWidth = 20
 let padelLeftHeight = 200
+let padelLeftSpeed = 15
+let padelLeftYPosition = (windowHeight - padelLeftHeight)/2
 
 createBall()
 createPadel()
@@ -50,15 +52,15 @@ function createPadel() {
     padelLeft.style.width = `${padelLeftWidth}px`
     padelLeft.style.backgroundColor = "Red"
     padelLeft.style.position = "absolute"
-    padelLeft.style.top = `${(windowHeight - padelLeftHeight)/2}px`
+    padelLeft.style.top = `${padelLeftYPosition}px`
     padelLeft.style.left = "50px"
 }
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
-        
+        padelLeftYPosition = `${padelLeftYPosition + padelLeftSpeed}px`
     }
     if (event.key == 's') {
-
+        padelLeftYPosition = `${padelLeftYPosition - padelLeftSpeed}px`
     }
 })
