@@ -45,7 +45,9 @@ function moveBall() {
     if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius) {
         ballYPosition = ballYDirection * -1
     }
-    if (ballXPosition <= )
+    if (ballXPosition <= padelLeftWidth && ballYPosition <= windowHeight + padelLeftYPosition) {
+
+    }
 }
 
 function createPadel() {
