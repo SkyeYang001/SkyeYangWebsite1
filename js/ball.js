@@ -1,5 +1,6 @@
 const ball = document.createElement('div')
 // creates a div
+const padelLeft = document.createElement('div')
 const ballRadius = 30
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
