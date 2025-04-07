@@ -41,7 +41,7 @@ function moveBall() {
     ballYPosition = ballXPosition + ballSpeed * ballYDirection
     ball.style.top = `${ballYPosition}px`
     if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius) {
-        ballYPosition = ballYDirection * -1
+        ballYPosition = ballYDirection * 1
     }
 }
 
@@ -50,7 +50,6 @@ function createPadel() {
     padelLeft.style.width = `${padelLeftWidth}px`
     padelLeft.style.backgroundColor = "Red"
     padelLeft.style.position = "absolute"
-    // padelLeft.style.top = `${}px`
-    // padelLeft.style.left = `${}px`
-
+    padelLeft.style.top = `${(windowHeight - padelLeftHeight)/2}px`
+    padelLeft.style.left = "50px"
 }
