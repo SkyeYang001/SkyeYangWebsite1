@@ -58,9 +58,20 @@ function createPadel() {
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
-        padelLeftYPosition = padelLeftYPosition + padelLeftSpeed
+        if (padelLeftYPosition <= 0) {
+            padelLeftYPosition = 0
+        }
+        else {
+            padelLeftYPosition = padelLeftYPosition - padelLeftSpeed
+        }
     }
     if (event.key == 's') {
-        padelLeftYPosition = padelLeftYPosition - padelLeftSpeed
+        if (padelLeftYPosition >= windowHeight) {
+            padelLeftYPosition = windowHeight
+        }
+        else {
+            padelLeftYPosition = padelLeftYPosition + padelLeftSpeed
+        }
     }
+    padelLeft.style.top = `${padelLeftYPosition}px`
 })
