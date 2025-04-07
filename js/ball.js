@@ -54,4 +54,6 @@ function createPadel() {
     padelLeft.style.left = "50px"
 }
 
-LPadel.addEventListener('keyup')
+document.addEventListener('keyup', (event) => {
+    
+})
