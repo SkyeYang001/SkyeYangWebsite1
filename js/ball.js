@@ -16,6 +16,7 @@ let padelLeftWidth = 20
 let padelLeftHeight = 100
 
 createBall()
+createPadel()
 
 setInterval(moveBall, 10)
 
@@ -42,4 +43,14 @@ function moveBall() {
     if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius) {
         ballYPosition = ballYDirection * -1
     }
+}
+
+function createPadel() {
+    padelLeft.style.height = `${padelLeftHeight}px`
+    padelLeft.style.width = `${padelLeftWidth}px`
+    padelLeft.style.backgroundColor = "Red"
+    padelLeft.style.position = "absolute"
+    padelLeft.style.top = `${}px`
+    padelLeft.style.left = `${}px`
+
 }
