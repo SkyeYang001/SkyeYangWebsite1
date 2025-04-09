@@ -21,9 +21,9 @@ let paddleLeftSpeed = 5
 let paddleLeftXPosition = 70
 let paddleLeftYPosition = (windowHeight - paddleLeftHeight) / 2
 
-let scoreboardWidth = 30
+let scoreboardWidth = 175
 let scoreboardHeight = 73
-let scoreboardXPosition = 10
+let scoreboardXPosition = 0
 let scoreboardYPosition = 0
 
 let score = 0 // display the score increase score by 1 everytime the ball hits the paddle
@@ -146,6 +146,7 @@ function createscoreBoard() {
         scoreboard.style.position = "absolute"
         scoreboard.style.top = `${scoreboardYPosition}px`
         scoreboard.style.right = `${scoreboardXPosition}px`
+        scoreboard.style.border = "black"
 }
 
 function animate() {
