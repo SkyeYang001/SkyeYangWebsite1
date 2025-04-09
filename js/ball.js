@@ -31,8 +31,8 @@ let level = 1 // display the level increase level by 1 everytime the score incre
 
 let titleboardWidth = 350
 let titleboardHeight = 100
-let titleboardXPosition = windowWidth / 2 - titleboardWidth
-let titleboardYPosition = windowHeight / 2 - titleboardHeight
+let titleboardXPosition = (windowWidth - titleboardWidth) / 2
+let titleboardYPosition = (windowHeight - titleboardHeight) / 2
 
 createBall()
 createpaddle()
@@ -186,4 +186,4 @@ function animate() {
 
 
 
-animate()
+// animate()
