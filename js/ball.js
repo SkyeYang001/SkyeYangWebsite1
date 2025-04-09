@@ -156,12 +156,12 @@ function createscoreBoard() {
         scoreboard.style.borderRadius = "10px"
         scoreboard.style.borderColor = "Red"
         scoreboard.style.borderStyle = "Solid"
-        scoreboard.innerHTML =`Score: ${score}`
+        scoreboard.innerHTML =`Score: ${score} <br> Level: 1`
 }
 
 function increaseScore() {
     score = score + 1
-    scoreboard.innerHTML =`Score: ${score}`
+    scoreboard.innerHTML =`Score: ${score} <br> Level: 1`
 }
 
 function createTitleBoard() {
@@ -177,6 +177,10 @@ function createTitleBoard() {
     titleboard.innerHTML = "Press Enter to play!"
 }
 
+document.addEventListener('keydown', (event) => {
+    if (event.key == 'enter') {
+        animate()
+    })
 
 function animate() {
     moveBall()
