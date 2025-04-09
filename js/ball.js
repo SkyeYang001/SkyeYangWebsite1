@@ -146,7 +146,8 @@ function createscoreBoard() {
         scoreboard.style.position = "absolute"
         scoreboard.style.top = `${scoreboardYPosition}px`
         scoreboard.style.right = `${scoreboardXPosition}px`
-        scoreboard.style.border = "black"
+        scoreboard.style.borderRadius = "10px"
+        scoreboard.style.borderColor = "Black"
 }
 
 function animate() {
