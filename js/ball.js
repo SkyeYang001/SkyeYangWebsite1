@@ -28,6 +28,7 @@ let scoreboardHeight = 73
 
 let score = 0 // display the score increase score by 1 everytime the ball hits the paddle
 let level = 1 // display the level increase level by 1 everytime the score increase by 10 as the level increase increase the ball speed if the ball passes the paddle end game (ball stops/disappear) let the user know the game is over
+let hit = 0
 
 let titleboardWidth = 350
 let titleboardHeight = 100
@@ -156,12 +157,17 @@ function createscoreBoard() {
         scoreboard.style.borderRadius = "10px"
         scoreboard.style.borderColor = "Red"
         scoreboard.style.borderStyle = "Solid"
-        scoreboard.innerHTML =`Score: ${score} <br> Level: 1`
+        scoreboard.innerHTML =`Score: ${score} <br> Level: ${level}`
 }
 
 function increaseScore() {
     score = score + 1
-    scoreboard.innerHTML =`Score: ${score} <br> Level: 1`
+    hit = hit + 1
+    scoreboard.innerHTML =`Score: ${score} <br> Level: ${level}`
+    if (hit == 10) {
+        hit = 0
+        scoreboard.innerHTML =`Score: ${score} <br> Level: ${level}`
+    }
 }
 
 function createTitleBoard() {
