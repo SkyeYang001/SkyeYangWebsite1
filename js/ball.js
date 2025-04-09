@@ -26,8 +26,8 @@ let paddleLeftYPosition = (windowHeight - paddleLeftHeight) / 2
 let scoreboardWidth = 175
 let scoreboardHeight = 73
 
-let score = 0 // display the score increase score by 1 everytime the ball hits the paddle
-let level = 1 // display the level increase level by 1 everytime the score increase by 10 as the level increase increase the ball speed if the ball passes the paddle end game (ball stops/disappear) let the user know the game is over
+let score = 0
+let level = 1
 let hit = 0
 
 let titleboardWidth = 350
@@ -87,7 +87,7 @@ function moveBall() {
         ballXDirection = ballXDirection * -1
         increaseScore()
     }
-    if (ballLeft <= 0 ) {
+    if (ballLeft <= 0) {
         gameover()
     }
 }
@@ -147,27 +147,26 @@ function movePaddleLeft() {
 }
 
 function createscoreBoard() {
-        scoreboard.style.height = `${scoreboardHeight}px`
-        scoreboard.style.width = `${scoreboardWidth}px`
-        scoreboard.style.backgroundColor = "Green"
-        scoreboard.style.position = "absolute"
-        scoreboard.style.top = "0"
-        scoreboard.style.right = "0"
-        scoreboard.style.borderRadius = "10px"
-        scoreboard.style.borderColor = "Red"
-        scoreboard.style.borderStyle = "Solid"
-        scoreboard.innerHTML =`Score: ${score} <br> Level: ${level}`
+    scoreboard.style.height = `${scoreboardHeight}px`
+    scoreboard.style.width = `${scoreboardWidth}px`
+    scoreboard.style.backgroundColor = "Green"
+    scoreboard.style.position = "absolute"
+    scoreboard.style.top = "0"
+    scoreboard.style.right = "0"
+    scoreboard.style.borderRadius = "10px"
+    scoreboard.style.borderColor = "Red"
+    scoreboard.style.borderStyle = "Solid"
 }
 
 function increaseScore() {
     score = score + 1
     hit = hit + 1
-    scoreboard.innerHTML =`Score: ${score} <br> Level: ${level}`
-    if (hit == 1) {
+    scoreboard.innerHTML = `Score: ${score} <br> Level: ${level}`
+    if (hit == 10) {
         hit = 0
         level = level + 1
         ballSpeed = ballSpeed + 1
-        scoreboard.innerHTML =`Score: ${score} <br> Level: ${level}`
+        scoreboard.innerHTML = `Score: ${score} <br> Level: ${level}`
     }
 }
 
@@ -190,10 +189,21 @@ document.addEventListener('keyup', (event) => {
     if (gameactive == false && event.key == 'Enter') {
         titleboard.style.display = "none"
         gameactive = true
+
         ballSpeed = 5
-        score = -1
+        ballXPosition = windowWidth / 2 - ballRadius
+        ballXDirection = 1
+        ballYPosition = windowHeight / 2 - ballRadius
+        ballYDirection = 1
+
+        paddleLeftXPosition = 70
+        paddleLeftYPosition = (windowHeight - paddleLeftHeight) / 2
+
+        score = 0
         level = 1
-        hit = -1
+        hit = 0
+
+        scoreboard.innerHTML = `Score: ${score} <br> Level: ${level}`
         animate()
     }
 })
