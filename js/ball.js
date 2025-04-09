@@ -1,4 +1,4 @@
-const body = 
+const body = document.body
 const ball = document.createElement('div')
 document.body.appendChild(ball)
 // creates a div
@@ -167,7 +167,7 @@ function increaseScore() {
         hit = 0
         level = level + 1
         ballSpeed = ballSpeed + 1
-
+        body.style.backgroundColor = 
         scoreboard.innerHTML = `Score: ${score} <br> Level: ${level}`
     }
 }
