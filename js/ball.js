@@ -87,6 +87,9 @@ function moveBall() {
         ballXDirection = ballXDirection * -1
         increaseScore()
     }
+    if (ballXPosition == 0) {
+        gameover()
+    }
 }
 
 function createpaddle() {
@@ -197,9 +200,10 @@ document.addEventListener('keyup', (event) => {
 })
 
 function gameover() {
+    cancelAnimationFrame(animate)
     gameactive = false
     titleboard.style.display = "block"
-    cancelAnimationFrame(animate)
+    titleboard.innerHTML = "Gameover <br>Press Enter to play!"
 }
 
 function animate() {
