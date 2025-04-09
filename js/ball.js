@@ -78,6 +78,7 @@ function moveBall() {
         (ballXDirection == -1)
     ) {
         ballXDirection = ballXDirection * -1
+        increaseScore()
     }
 }
 
@@ -147,7 +148,14 @@ function createscoreBoard() {
         scoreboard.style.top = `${scoreboardYPosition}px`
         scoreboard.style.right = `${scoreboardXPosition}px`
         scoreboard.style.borderRadius = "10px"
-        scoreboard.style.borderColor = "Black"
+        scoreboard.style.borderColor = "Red"
+        scoreboard.style.borderStyle = "Solid"
+        scoreboard.innerHTML =`Score: ${score}`
+}
+
+function increaseScore() {
+    score = score + 1
+    scoreboard.innerHTML =`Score: ${score}`
 }
 
 function animate() {
