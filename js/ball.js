@@ -177,10 +177,15 @@ function createTitleBoard() {
     titleboard.innerHTML = "Press Enter to play!"
 }
 
-document.addEventListener('keydown', (event) => {
-    if (event.key == 'enter') {
+gameactive = false
+
+document.addEventListener('keyup', (event) => {
+    if (event.key == 'Enter') {
+        
         animate()
-    })
+        gameactive = true
+    }
+})
 
 function animate() {
     moveBall()
