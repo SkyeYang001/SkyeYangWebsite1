@@ -87,7 +87,7 @@ function moveBall() {
         ballXDirection = ballXDirection * -1
         increaseScore()
     }
-    if (ballLeft = ) {
+    if (ballLeft <= 0 ) {
         gameover()
     }
 }
