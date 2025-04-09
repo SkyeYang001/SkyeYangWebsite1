@@ -180,10 +180,10 @@ function createTitleBoard() {
 gameactive = false
 
 document.addEventListener('keyup', (event) => {
-    if (event.key == 'Enter') {
+    if (gameactive == false && event.key == 'Enter') {
         titleboard.style.display = "none"
-        animate()
         gameactive = true
+        animate()
     }
 })
 
