@@ -198,7 +198,8 @@ document.addEventListener('keyup', (event) => {
 
 function gameover() {
     gameactive = false
-    titleboard.style.display = "none"
+    titleboard.style.display = "block"
+    cancelAnimationFrame(animate)
 }
 
 function animate() {
