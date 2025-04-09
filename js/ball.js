@@ -195,6 +195,10 @@ document.addEventListener('keyup', (event) => {
         titleboard.style.display = "none"
         gameactive = true
         ballSpeed = 5
+        score = -1
+        level = 1
+        hit = -1
+        increaseScore()
         animate()
     }
 })
