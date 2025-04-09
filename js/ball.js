@@ -1,27 +1,37 @@
 const ball = document.createElement('div')
 document.body.appendChild(ball)
 // creates a div
-const padelLeft = document.createElement('div')
-document.body.appendChild(padelLeft)
-const ballRadius = 30
+const paddleLeft = document.createElement('div')
+document.body.appendChild(paddleLeft)
+const scoreboard = document.createElement('div')
+document.body.appendChild(scoreboard)
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 // The computer's aspect ratio height and width
+const ballRadius = 20
 let ballSpeed = 5
 let ballXPosition = windowWidth / 2 - ballRadius
 let ballXDirection = 1
 let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
-let padelLeftWidth = 20
-let padelLeftHeight = 200
-let padelLeftSpeed = 30
-let padelLeftXPosition = 50
-let padelLeftYPosition = (windowHeight - padelLeftHeight)/2
+
+let paddleLeftWidth = 10
+let paddleLeftHeight = 100
+let paddleLeftSpeed = 5
+let paddleLeftXPosition = 70
+let paddleLeftYPosition = (windowHeight - paddleLeftHeight) / 2
+
+let scoreboardWidth = 30
+let scoreboardHeight = 73
+let scoreboardXPosition = 10
+let scoreboardYPosition = 0
+
+let score = 0 // display the score increase score by 1 everytime the ball hits the paddle
+let level = 1 // display the level increase level by 1 everytime the score increase by 10 as the level increase increase the ball speed if the ball passes the paddle end game (ball stops/disappear) let the user know the game is over
 
 createBall()
-createPadel()
-
-setInterval(moveBall, 10)
+createpaddle()
+createscoreBoard()
 
 function createBall() {
     // adds ball
@@ -37,46 +47,111 @@ function createBall() {
 function moveBall() {
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
     ball.style.left = `${ballXPosition}px`
-    if (ballXPosition < 0 || ballXPosition > windowWidth - 2 * ballRadius) {
-        ballXDirection = ballXDirection * -1
-    }
-
-    ballYPosition = ballXPosition + ballSpeed * ballYDirection
+    ballYPosition = ballYPosition + ballSpeed * ballYDirection
     ball.style.top = `${ballYPosition}px`
-    if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius) {
-        ballYPosition = ballYDirection * -1
-    }
-    if (ballXPosition <= padelLeftXPosition + padelLeftWidth || ballYPosition >= windowHeight - padelLeftYPosition && ballYPosition <= padelLeftYPosition) {
+
+    if (
+        ballXPosition < 0 ||
+        ballXPosition > windowWidth - 2 * ballRadius
+    ) {
         ballXDirection = ballXDirection * -1
-        ballYPosition = ballYDirection * -1
+    }
+
+    if (
+        ballYPosition < 0 ||
+        ballYPosition > windowHeight - 2 * ballRadius
+    ) {
+        ballYDirection = ballYDirection * -1
+    }
+
+    let ballTop = ballYPosition
+    let ballBottom = ballYPosition / 2 * ballRadius
+    let ballLeft = ballXPosition
+    let paddleLeftTop = paddleLeftYPosition
+    let paddleLeftBottom = paddleLeftYPosition + paddleLeftHeight
+    let paddleLeftRight = paddleLeftXPosition + paddleLeftWidth
+
+    if (
+        (ballBottom >= paddleLeftTop) &&
+        (ballTop <= paddleLeftBottom) &&
+        (ballLeft <= paddleLeftRight) &&
+        (ballXDirection == -1)
+    ) {
+        ballXDirection = ballXDirection * -1
     }
 }
 
-function createPadel() {
-    padelLeft.style.height = `${padelLeftHeight}px`
-    padelLeft.style.width = `${padelLeftWidth}px`
-    padelLeft.style.backgroundColor = "Red"
-    padelLeft.style.position = "absolute"
-    padelLeft.style.top = `${padelLeftYPosition}px`
-    padelLeft.style.left = `${padelLeftXPosition}px`
+function createpaddle() {
+    paddleLeft.style.height = `${paddleLeftHeight}px`
+    paddleLeft.style.width = `${paddleLeftWidth}px`
+    paddleLeft.style.backgroundColor = "Red"
+    paddleLeft.style.position = "absolute"
+    paddleLeft.style.top = `${paddleLeftYPosition}px`
+    paddleLeft.style.left = `${paddleLeftXPosition}px`
 }
+
+wKey = false
+sKey = false
+
+document.addEventListener('keydown', (event) => {
+    if (event.key == 'w') {
+        wKey = true
+        console.log(wKey)
+        // if (paddleLeftYPosition <= 0) {
+        //     paddleLeftYPosition = 0
+        // }
+        // else {
+        //     paddleLeftYPosition = paddleLeftYPosition - paddleLeftSpeed
+        // }
+    }
+    if (event.key == 's') {
+        sKey = true
+        console.log(sKey)
+        // if (paddleLeftYPosition >= windowHeight - paddleLeftHeight) {
+        //     paddleLeftYPosition = windowHeight - paddleLeftHeight
+        // }
+        // else {
+        //     paddleLeftYPosition = paddleLeftYPosition + paddleLeftSpeed
+        // }
+    }
+})
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
-        if (padelLeftYPosition <= 0) {
-            padelLeftYPosition = 0
-        }
-        else {
-            padelLeftYPosition = padelLeftYPosition - padelLeftSpeed
-        }
+        wKey = false
+        console.log(wKey)
     }
     if (event.key == 's') {
-        if (padelLeftYPosition >= windowHeight - padelLeftHeight) {
-            padelLeftYPosition = windowHeight - padelLeftHeight
-        }
-        else {
-            padelLeftYPosition = padelLeftYPosition + padelLeftSpeed
-        }
+        sKey = false
+        console.log(sKey)
     }
-    padelLeft.style.top = `${padelLeftYPosition}px`
 })
+
+function movePaddleLeft() {
+    if (wKey == true && paddleLeftYPosition > 0) {
+        paddleLeftYPosition = paddleLeftYPosition - paddleLeftSpeed
+
+    }
+    if (sKey == true && paddleLeftYPosition < windowHeight - paddleLeftHeight) {
+        paddleLeftYPosition = paddleLeftYPosition + paddleLeftSpeed
+
+    }
+    paddleLeft.style.top = `${paddleLeftYPosition}px`
+}
+
+function createscoreBoard() {
+        scoreboard.style.height = `${scoreboardHeight}px`
+        scoreboard.style.width = `${scoreboardWidth}px`
+        scoreboard.style.backgroundColor = "Green"
+        scoreboard.style.position = "absolute"
+        scoreboard.style.top = `${scoreboardYPosition}px`
+        scoreboard.style.right = `${scoreboardXPosition}px`
+}
+
+function animate() {
+    moveBall()
+    movePaddleLeft()
+    requestAnimationFrame(animate)
+}
+
+animate()
