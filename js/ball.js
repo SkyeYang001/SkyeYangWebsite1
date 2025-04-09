@@ -5,6 +5,8 @@ const paddleLeft = document.createElement('div')
 document.body.appendChild(paddleLeft)
 const scoreboard = document.createElement('div')
 document.body.appendChild(scoreboard)
+const titleboard = document.createElement('div')
+document.body.appendChild(titleboard)
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 // The computer's aspect ratio height and width
@@ -23,11 +25,14 @@ let paddleLeftYPosition = (windowHeight - paddleLeftHeight) / 2
 
 let scoreboardWidth = 175
 let scoreboardHeight = 73
-let scoreboardXPosition = 0
-let scoreboardYPosition = 0
 
 let score = 0 // display the score increase score by 1 everytime the ball hits the paddle
 let level = 1 // display the level increase level by 1 everytime the score increase by 10 as the level increase increase the ball speed if the ball passes the paddle end game (ball stops/disappear) let the user know the game is over
+
+let titleboardWidth = 350
+let titleboardHeight = 100
+let titleboardXPosition = windowWidth / 2 - titleboardWidth
+let titleboardYPosition = windowWidth / 2 - titleboardYPosition
 
 createBall()
 createpaddle()
@@ -145,8 +150,8 @@ function createscoreBoard() {
         scoreboard.style.width = `${scoreboardWidth}px`
         scoreboard.style.backgroundColor = "Green"
         scoreboard.style.position = "absolute"
-        scoreboard.style.top = `${scoreboardYPosition}px`
-        scoreboard.style.right = `${scoreboardXPosition}px`
+        scoreboard.style.top = `${}px
+        scoreboard.style.right = `${}px
         scoreboard.style.borderRadius = "10px"
         scoreboard.style.borderColor = "Red"
         scoreboard.style.borderStyle = "Solid"
@@ -158,10 +163,26 @@ function increaseScore() {
     scoreboard.innerHTML =`Score: ${score}`
 }
 
+function createTitleBoard() {
+    titleboard.style.height = `${}px`
+    titleboard.style.width = `${}px`
+    titleboard.style.backgroundColor = "Blue"
+    titleboard.style.position = "absolute"
+    titleboard.style.top = `${}px`
+    titleboard.style.right = `${}px`
+    titleboard.style.borderRadius = "10px"
+    titleboard.style.borderColor = "Red"
+    titleboard.style.borderStyle = "Solid"
+    titleboard.innerHTML = "Press Enter to play!"
+}
+
+
 function animate() {
     moveBall()
     movePaddleLeft()
     requestAnimationFrame(animate)
 }
+
+
 
 animate()
