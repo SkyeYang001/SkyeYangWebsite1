@@ -183,6 +183,7 @@ document.addEventListener('keyup', (event) => {
     if (gameactive == false && event.key == 'Enter') {
         titleboard.style.display = "none"
         gameactive = true
+        ballSpeed = 5
         animate()
     }
 })
