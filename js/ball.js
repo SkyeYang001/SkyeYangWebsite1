@@ -32,7 +32,7 @@ let level = 1 // display the level increase level by 1 everytime the score incre
 let titleboardWidth = 350
 let titleboardHeight = 100
 let titleboardXPosition = windowWidth / 2 - titleboardWidth
-let titleboardYPosition = windowWidth / 2 - titleboardYPosition
+let titleboardYPosition = windowWidth / 2 - titleboardHeight
 
 createBall()
 createpaddle()
@@ -150,8 +150,8 @@ function createscoreBoard() {
         scoreboard.style.width = `${scoreboardWidth}px`
         scoreboard.style.backgroundColor = "Green"
         scoreboard.style.position = "absolute"
-        scoreboard.style.top = `${}px
-        scoreboard.style.right = `${}px
+        scoreboard.style.top = "0"
+        scoreboard.style.right = "0"
         scoreboard.style.borderRadius = "10px"
         scoreboard.style.borderColor = "Red"
         scoreboard.style.borderStyle = "Solid"
@@ -164,12 +164,12 @@ function increaseScore() {
 }
 
 function createTitleBoard() {
-    titleboard.style.height = `${}px`
-    titleboard.style.width = `${}px`
+    titleboard.style.height = `${titleboardHeight}px`
+    titleboard.style.width = `${titleboardWidth}px`
     titleboard.style.backgroundColor = "Blue"
     titleboard.style.position = "absolute"
-    titleboard.style.top = `${}px`
-    titleboard.style.right = `${}px`
+    titleboard.style.top = `${titleboardYPosition}px`
+    titleboard.style.right = `${titleboardXPosition}px`
     titleboard.style.borderRadius = "10px"
     titleboard.style.borderColor = "Red"
     titleboard.style.borderStyle = "Solid"
