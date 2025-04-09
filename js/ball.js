@@ -157,13 +157,18 @@ function createscoreBoard() {
     scoreboard.style.borderRadius = "10px"
     scoreboard.style.borderColor = "Red"
     scoreboard.style.borderStyle = "Solid"
+    scoreboard.style.display = "flex"
+    scoreboard.style.justifyContent = "center"
+    scoreboard.style.alignItems = "center"
+    scoreboard.style.fontWeight = "Bold"
+    scoreboard.innerHTML = "Scoreboard"
 }
 
 function increaseScore() {
     score = score + 1
     hit = hit + 1
     scoreboard.innerHTML = `Score: ${score} <br> Level: ${level}`
-    if (hit == 1) {
+    if (hit == 10) {
         hit = 0
         level = level + 1
         ballSpeed = ballSpeed + 1
@@ -181,7 +186,12 @@ function createTitleBoard() {
     titleboard.style.borderRadius = "10px"
     titleboard.style.borderColor = "Red"
     titleboard.style.borderStyle = "Solid"
+    titleboard.style.display = "flex"
+    titleboard.style.justifyContent = "center"
+    titleboard.style.alignItems = "center"
+    titleboard.style.fontWeight = "Bold"
     titleboard.innerHTML = "Press Enter to play!"
+
 }
 
 gameactive = false
