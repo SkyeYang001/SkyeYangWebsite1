@@ -194,7 +194,6 @@ document.addEventListener('keyup', (event) => {
         score = -1
         level = 1
         hit = -1
-        increaseScore()
         animate()
     }
 })
@@ -209,9 +208,9 @@ function gameover() {
 function animate() {
     moveBall()
     movePaddleLeft()
-    requestAnimationFrame(animate)
+    if (gameactive == true) {
+        requestAnimationFrame(animate)
+    }
 }
-
-
 
 // animate()
