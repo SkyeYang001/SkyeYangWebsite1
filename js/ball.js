@@ -87,7 +87,7 @@ function moveBall() {
         ballXDirection = ballXDirection * -1
         increaseScore()
     }
-    if (ballXPosition == 0) {
+    if (ball.style.left == 0) {
         gameover()
     }
 }
@@ -107,7 +107,6 @@ sKey = false
 document.addEventListener('keydown', (event) => {
     if (event.key == 'w') {
         wKey = true
-        console.log(wKey)
         // if (paddleLeftYPosition <= 0) {
         //     paddleLeftYPosition = 0
         // }
@@ -117,7 +116,6 @@ document.addEventListener('keydown', (event) => {
     }
     if (event.key == 's') {
         sKey = true
-        console.log(sKey)
         // if (paddleLeftYPosition >= windowHeight - paddleLeftHeight) {
         //     paddleLeftYPosition = windowHeight - paddleLeftHeight
         // }
@@ -130,11 +128,9 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
         wKey = false
-        console.log(wKey)
     }
     if (event.key == 's') {
         sKey = false
-        console.log(sKey)
     }
 })
 
