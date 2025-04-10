@@ -36,7 +36,7 @@ let titleboardHeight = 100
 let titleboardXPosition = (windowWidth - titleboardWidth) / 2
 let titleboardYPosition = (windowHeight - titleboardHeight) / 2
 
-let background = '#000000'
+let color = '#000000'
 
 createBall()
 createpaddle()
@@ -174,7 +174,7 @@ function increaseScore() {
         hit = 0
         level = level + 1
         ballSpeed = ballSpeed + 1
-        body.style.backgroundColor = `${background}`
+        body.style.backgroundColor = `${color} + 1`
         scoreboard.innerHTML = `Score: ${score} <br> Level: ${level}`
     }
 }
@@ -212,7 +212,9 @@ document.addEventListener('keyup', (event) => {
         paddleLeftXPosition = 70
         paddleLeftYPosition = (windowHeight - paddleLeftHeight) / 2
 
-        background = '#000000'
+        color = '#000000'
+
+        body.style.backgroundColor = "white"
 
         score = 0
         level = 1
