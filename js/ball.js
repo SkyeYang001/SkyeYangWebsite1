@@ -175,7 +175,7 @@ function increaseScore() {
         level = level + 1
         ballSpeed = ballSpeed + 1
         body.style.backgroundColor = `${colorBG}`
-        colorBG = colorBG + 100
+        colorBG = colorBG + 1
         scoreboard.innerHTML = `Score: ${score} <br> Level: ${level}`
     }
 }
