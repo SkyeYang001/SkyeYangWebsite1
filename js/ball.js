@@ -177,7 +177,9 @@ function increaseScore() {
         level = level + 1
         ballSpeed = ballSpeed + 1
         body.style.backgroundColor = `rbg(${red},${blue},${green})`
-        colorBG = colorBG + 1
+        red = red - 1
+        blue = blue - 1
+        green = green - 1
         scoreboard.innerHTML = `Score: ${score} <br> Level: ${level}`
     }
 }
@@ -215,7 +217,9 @@ document.addEventListener('keyup', (event) => {
         paddleLeftXPosition = 70
         paddleLeftYPosition = (windowHeight - paddleLeftHeight) / 2
 
-        colorBG = '#000000'
+        red = 255
+        blue = 255
+        g
 
         body.style.backgroundColor = "white"
 
