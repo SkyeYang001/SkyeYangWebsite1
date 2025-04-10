@@ -190,8 +190,7 @@ function createTitleBoard() {
     titleboard.style.justifyContent = "center"
     titleboard.style.alignItems = "center"
     titleboard.style.fontWeight = "Bold"
-    titleboard.innerHTML = "Press Enter to play!"
-
+    titleboard.innerHTML = "Press 'Enter' to play!"
 }
 
 gameactive = false
@@ -224,8 +223,8 @@ document.addEventListener('keyup', (event) => {
 function gameover() {
     cancelAnimationFrame(animate)
     gameactive = false
-    titleboard.style.display = "block"
-    titleboard.innerHTML = "Gameover <br>Press Enter to play!"
+    titleboard.style.display = "flex"
+    titleboard.innerHTML = "Gameover <br>Press 'Enter' to play again!"
 }
 
 function animate() {
