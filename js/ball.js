@@ -36,7 +36,7 @@ let titleboardHeight = 100
 let titleboardXPosition = (windowWidth - titleboardWidth) / 2
 let titleboardYPosition = (windowHeight - titleboardHeight) / 2
 
-let background = 000000
+let background = '000000'
 
 createBall()
 createpaddle()
