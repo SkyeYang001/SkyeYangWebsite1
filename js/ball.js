@@ -36,10 +36,6 @@ let titleboardHeight = 100
 let titleboardXPosition = (windowWidth - titleboardWidth) / 2
 let titleboardYPosition = (windowHeight - titleboardHeight) / 2
 
-let red = '255'
-let blue = '255'
-let green = '255'
-
 createBall()
 createpaddle()
 createscoreBoard()
@@ -168,18 +164,20 @@ function createscoreBoard() {
     scoreboard.innerHTML = "Scoreboard"
 }
 
+
+let redcolor = 0
+let greencolor = 0
+let bluecolor = 0
+
 function increaseScore() {
     score = score + 1
     hit = hit + 1
     scoreboard.innerHTML = `Score: ${score} <br> Level: ${level}`
-    if (hit == 1) {
+    if (hit == 10) {
         hit = 0
         level = level + 1
         ballSpeed = ballSpeed + 1
-        body.style.backgroundColor = `rbg(${red},${blue},${green})`
-        red = red - 1
-        blue = blue - 1
-        green = green - 1
+        // body.style.backgroundColor = `rbg(${redcolor},${greencolor},${bluecolor})`
         scoreboard.innerHTML = `Score: ${score} <br> Level: ${level}`
     }
 }
@@ -217,9 +215,9 @@ document.addEventListener('keyup', (event) => {
         paddleLeftXPosition = 70
         paddleLeftYPosition = (windowHeight - paddleLeftHeight) / 2
 
-        red = 255
-        blue = 255
-        g
+        red = '255'
+        blue = '255'
+        green = '255'
 
         body.style.backgroundColor = "white"
 
@@ -236,7 +234,7 @@ function gameover() {
     cancelAnimationFrame(animate)
     gameactive = false
     titleboard.style.display = "flex"
-    titleboard.innerHTML = "Gameover <br>Press 'Enter' to play again!"
+    titleboard.innerHTML = "Gameover <br> Press 'Enter' to play again!"
 }
 
 function animate() {
