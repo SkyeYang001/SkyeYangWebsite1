@@ -154,6 +154,7 @@ function createscoreBoard() {
     scoreboard.style.position = "absolute"
     scoreboard.style.top = "0"
     scoreboard.style.right = "0"
+    scoreboard.style.color = "white"
     scoreboard.style.borderRadius = "10px"
     scoreboard.style.borderColor = "Red"
     scoreboard.style.borderStyle = "Solid"
@@ -189,6 +190,7 @@ function createTitleBoard() {
     titleboard.style.position = "absolute"
     titleboard.style.top = `${titleboardYPosition}px`
     titleboard.style.right = `${titleboardXPosition}px`
+    titleboard.style.color = "white"
     titleboard.style.borderRadius = "10px"
     titleboard.style.borderColor = "Red"
     titleboard.style.borderStyle = "Solid"
