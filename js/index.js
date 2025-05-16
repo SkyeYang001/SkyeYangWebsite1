@@ -4,7 +4,7 @@ const hello = document.getElementById('hello')
 const element1 = document.getElementById('element1')
 const element2 = document.getElementById('element2')
 const element3 = document.getElementById('element3')
-const pages = ['nav.html', 'search.html', 'loading.html', 'expanding.html', 'events.html', 'interactivewebpage.html', 'sound.html', 'insect.html', 'relaxer.html', 'art.html', 'ball.html']
+const pages = ['nav.html', 'search.html', 'loading.html', 'expanding.html', 'events.html', 'interactivewebpage.html', 'sound.html', 'insect.html', 'relaxer.html', 'art.html', 'ball.html', 'speach.html']
 
 
 let pictureactive = false
