@@ -3,6 +3,32 @@ If I want Github to reflect my changes
 2. git commit -m "text"
 3. git push
 
+ Terminal commands
+ code (name and it's type): Make a new .c file or opens an existing one
+ Make: Compile program (Creates a new file)
+ ./program: Find file (Starts the program)
+ mkdir (creates a folder)
+ cd (use terminal in folder like cd notes/ or programs/)
+ ls (shows the directory or what's available)
+ cp (file name and it's type) (new file name) (copies file)
+ const (something that won't change also known as a global variable)
+ git add. (Adding program to Github)
+ git commit (Pushing code in Github)
+ rm (removes a file)
+ Code
+ all strings end with a '\0' (null character)
+
+Python
+Terminal
+python ().py complies and runs programs
+
+importing libraries
+from cs50 import get_string, get_int
+variables can work with different data types
+var1 = "Mr. Yang"
+var2 = True
+var3 = 87
+
 CSS always do this:
 
 * {
