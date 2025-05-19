@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skye Yang Website 1 Speach</title>
-      <link rel="stylesheet" href="css/speach.css">
-      <link rel="stylesheet" href="css/navpage.css">
-</head>
-<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Skye Yang Website 1 Speach</title>
+        <link rel="stylesheet" href="css/speach.css">
+        <link rel="stylesheet" href="css/navpage.css">
+    </head>
+
+    <body>
 
         <nav class="nav">
             <div class="container">
@@ -33,11 +35,16 @@
             </button>
             <div id="textbox" class="textbox">
                 <div id="close" class="close">X</div>
-                
+                <h3>Choose Voice?</h3>
+                <select id="voices"></select>
+                <textarea id="text" placeholder="Enter text to read"></textarea>
+                <button class="btn" id="read">Read Text</button>
             </div>
+            <main></main>
         </div>
 
-</body>
+    </body>
     <script src="js/speach.js"></script>
     <script src="js/nav.js"></script>
+
 </html>
