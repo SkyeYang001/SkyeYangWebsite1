@@ -122,7 +122,12 @@ voicesSelect.addEventListener('change', setVoice())
 //set voice
 // 'e' is what is selected
 function setVoice(e) {
-    message.voice = voices.find(voice => voice.name == e.target.value)
+    message.voice = voices.find(voice => voice.name === e.target.value)
 }
 
 getVoices()
+
+readBtn.addEventListener('click', () => {
+    setTextMessage(textarea.value)
+    speakText()
+})
