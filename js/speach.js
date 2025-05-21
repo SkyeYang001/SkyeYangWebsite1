@@ -112,7 +112,6 @@ function getVoices() {
 }
 
 // voices change
-
 speechSynthesis.addEventListener('voiceschanged', getVoices)
 
 //change voice
