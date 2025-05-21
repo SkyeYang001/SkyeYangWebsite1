@@ -76,6 +76,10 @@ function createBox(item) {
     main.appendChild(box)
 }
 
+//initiallize speech synthesis
+const message = new SpeechSynthesisutterance()
+
+
 // toggle text box
 toggleBtn.addEventListener('click', () => {
     // console.log("Hello")
