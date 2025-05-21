@@ -5,8 +5,7 @@ const readBtn = document.getElementById('read')
 const toggleBtn = document.getElementById('toggle')
 const closeBtn = document.getElementById('close')
 
-const data = [
-    {
+const data = [{
         image: '../images/speachdrink.jpg',
         text: "I'm THirrrsty."
     },
@@ -30,7 +29,7 @@ const data = [
         image: '../images/speachangry.jpg',
         text: "I am ANRGY!!!"
     },
-        {
+    {
         image: '../images/speachsad.jpg',
         text: "I'm sad... so sad..."
     },
@@ -63,7 +62,7 @@ function createBox(item) {
     const box = document.createElement('div')
     box.classList.add('box')
     box.innerHTML =
-    `
+        `
     <img src='${item.image}' alt='${item.text}'>
     <p class='info'>${item.text}</p>
     `
@@ -71,6 +70,9 @@ function createBox(item) {
     box.addEventListener('click', () => {
         setTextMessage(item.text)
         speakText()
+        // add active effect
+        box.classList.add('active')
+        setTimeout(() => box.classList.remove('active'), 800)
     })
 
     main.appendChild(box)
