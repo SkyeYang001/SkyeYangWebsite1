@@ -117,7 +117,7 @@ function getVoices() {
 speechSynthesis.addEventListener('voiceschanged', getVoices)
 
 //change voice
-voicesSelect.addEventListener('change', setVoice())
+voicesSelect.addEventListener('change', setVoice)
 
 //set voice
 // 'e' is what is selected

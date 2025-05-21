@@ -6,6 +6,7 @@ body {
     margin: none;
     /* display: flex; */
     min-height: 100vh;
+    background-color:rgb(104, 247, 142);
 }
 
 .speach {
