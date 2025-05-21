@@ -115,5 +115,13 @@ function getVoices() {
 
 speechSynthesis.addEventListener('voiceschanged', getVoices)
 
-getVoices()
+//change voice
+voicesSelect.addEventListener('change', setVoice())
 
+//set voice
+// 'e' is what is selected
+function setVoice(e) {
+    message.voice = voices.find(voice = voice.name =)
+}
+
+getVoices()
