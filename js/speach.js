@@ -77,7 +77,7 @@ function createBox(item) {
 }
 
 //initiallize speech synthesis
-const message = new SpeechSynthesisutterance()
+const message = new SpeechSynthesisUtterance()
 
 function setTextMessage(text) {
     message.text = text
@@ -85,7 +85,7 @@ function setTextMessage(text) {
 
 //speak text
 function speakText() {
-    speachSynthesis.speak(message)
+    speechSynthesis.speak(message)
 }
 
 // toggle text box
