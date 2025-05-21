@@ -22,7 +22,7 @@ h1 {
 
 .btn {
     cursor: pointer;
-    background-color: #d67fe3;
+    background-color: #e6ba4c;
     borrder: 0;
     border-radius: 4px;
     color: #fff;
@@ -63,7 +63,7 @@ select:focus {
 }
 
 .textbox select {
-    background-color: #d67fe3;
+    background-color: #e6ba4c;
     border: 0;
     color: white;
     font-size: 12px;
